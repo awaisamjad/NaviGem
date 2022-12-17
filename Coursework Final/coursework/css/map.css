@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400');
+
+body {
+  background-color: #111e2f;
+
+}
+
+svg path {
+  fill: #516988;
+  stroke: #c8c8c8;
+  stroke-width: .5;
+}
+
+svg path:hover {
+  fill: #819ee8;
+  transition: 0.5s;
+  cursor: pointer;
+  stroke: #ffffff;
+  stroke-width: 1.5;
+}
+
+p {
+  font-size: small;
+}
+
+.button-1 {
+  background: none;
+  border: 2px solid #c8c8c8;
+  padding: 6px 10px;
+  min-width: 50px;
+  margin: 0;
+  cursor: pointer;
+  transition: color 0.3s linear;
+  z-index: 1;
+  font-size: larger;
+  color: #c8c8c8;
+  position: fixed;
+  letter-spacing: 0.1em;
+}
+
+.button-1::after{
+  content: "";
+  height: 2px;
+  width: 0%;
+  background-color: #c8c8c8;
+  display: block;
+  transition: .5s ease-in-out;
+}
+
+.button-1:hover::after{
+  content: "";
+  height: 2px;
+  width: 100%;
+  background-color: #c8c8c8;
+  display: block;
+}
+
+
+/* testing */
+
+.trail { /* className for the trail elements */
+  position: absolute;
+  height: 2.5px; width: 2.5px;
+  border-radius: 1.5px;
+  background: white;
+}

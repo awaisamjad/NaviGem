@@ -1,0 +1,108 @@
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400');
+
+body {
+  color: #c8c8c8;
+  /* font-family: 'Roboto', sans-serif; */
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 0.6rem;
+  /* align-self: center; */
+  background-image: url("../img/Tokyo1.jpeg");
+  background-position: center center; 
+  background-attachment: fixed;
+  background-size:  cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  filter: contrast(1.75);
+
+  display: grid;
+  place-content: center;
+  text-align: center;
+  min-height: 90vh;
+  
+  z-index: 0;
+  position: relative;
+  isolation: isolate;
+  animation: change 80s infinite ease-in-out;
+}
+
+.low-opacity-bg-image::after{
+  content:'';
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  background-color: #333743;
+  opacity: 0.7;
+  min-height: 100vh;
+}
+
+#index-header {
+  font-size: 5em;
+  padding: 0;
+  margin: 0;
+}
+
+h3 {
+  font-size: 1.5em;
+  padding: 0.5em;
+  margin: 0;
+  letter-spacing: 0.4rem;
+
+}
+
+p {
+  letter-spacing: 0.4rem;
+  margin: 0;
+  padding: 0;
+}
+
+.button-1 {
+  background: none;
+  border: 2px solid #c8c8c8;
+  padding: 12px 20px;
+  min-width: 200px;
+  margin: 0;
+  cursor: pointer;
+  transition: color 0.3s linear;
+  z-index: 1;
+  font-size: larger;
+  color: #c8c8c8;
+  position: relative;
+  letter-spacing: 0.2em;
+}
+
+.button-1::after{
+  content: "";
+  height: 2px;
+  width: 0%;
+  background-color: #c8c8c8;
+  display: block;
+  transition: .5s ease-in-out;
+}
+
+.button-1:hover::after{
+  content: "";
+  height: 2px;
+  width: 100%;
+  background-color: #c8c8c8;
+  display: block;
+}
+
+@keyframes change{
+  0%{
+    background-image: url("../img/london\ night.jpg");
+  }
+  25%{
+    background-image: url("../img/Tokyo1.jpeg");
+  }
+  50%{
+    background-image: url("../img/china.jpg");
+  }
+  75%{
+    background-image: url("../img/Rejavik1.jpeg");
+  }
+  100%{
+    background-image: url("../img/sydney.jpg");
+  }
+}
